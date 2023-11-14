@@ -2,7 +2,7 @@
 ## HHA 504 Assignment 8
 This task is designed to offer practical exposure to the process of containerizing Flask applications using Docker, initially on an individual basis and subsequently utilizing Docker Compose to oversee multiple applications.
 
-**The Process of Dockerizing the Applications in Both Parts**
+### **The Process of Dockerizing the Applications in Both Parts**
 1. Create a Flask Application:
 
 Develop your Flask application if you haven't already. Ensure that it has a requirements.txt file listing all the Python dependencies needed to run the application.
@@ -80,11 +80,11 @@ Run the application using:
 docker-compose up
 ```
 
-**The Build and Run Commands Used**
+### **The Build and Run Commands Used**
 
 This is located in each of the files above. 
 
-**Observations, challenges faced, and reflections on the use of Docker and Docker Compose**
+### **Observations, challenges faced, and reflections on the use of Docker and Docker Compose**
 
 Observations and challenges are located in the files above. 
 
