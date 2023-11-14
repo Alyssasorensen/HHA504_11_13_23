@@ -1,0 +1,15 @@
+version: '3'
+services:
+  flask_app_1:
+    build: ./Part1
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./Part1:/app
+  flask_app_2:
+    build: ./Part2
+    ports:
+      - "5002:5000"
+    volumes:
+      - ./Part2:/app
+
