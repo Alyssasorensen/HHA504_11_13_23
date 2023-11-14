@@ -20,6 +20,7 @@ CMD ["python", "flaskapp.py"]
 # 5th Step: then insert the command, "docker ps," and the image "alyssa17" will appear. 
 
 
-
 # Docker build command: docker build -t docker_example_1 .
 # Docker run command: docker run -d -p 5001:5000 docker_example_1
+
+# Experienced no challenges 
