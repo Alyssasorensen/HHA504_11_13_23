@@ -1,0 +1,64 @@
+version: '3'
+services:
+  app1:
+    build: ./flask1
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./flask1:/app
+  app2:
+    build: ./flask2
+    ports:
+      - "5002:5000"
+    volumes:
+      - ./flask2:/app
+
+# Explanation of docker-compose.yml section:
+
+# version: '3': Specifies the version of the Docker Compose file syntax. In this case, it's version 3. The version number indicates the features and options available in the compose file.
+
+# 'services': Defines the services that make up my application. In this case, there are two services named 'app1' and 'app2'.
+
+# 'app1': The name of the first service.
+
+# 'build: ./flask1': Specifies the build context for the service. The Dockerfile and application code for 'app1' are expected to be in the './flask1' directory.
+
+# 'ports: - "5001:5000"': Maps port 5000 from the container to port 5001 on the host. This means you can access the service externally on http://localhost:5001.
+
+# 'volumes: - ./flask1:/app': Mounts the './flask1' directory from the host into the '/app' directory in the container. This allows for live code updates without rebuilding the image, as changes in the host directory are reflected in the container.
+
+
+# 'app2': The name of the second service.
+
+# 'build: ./flask2': Specifies the build context for the service. The Dockerfile and application code for 'app2' are expected to be in the './flask2' directory.
+
+# 'ports: - "5002:5000"': Maps port 5000 from the container to port 5002 on the host. This means you can access the service externally on http://localhost:5002.
+
+# 'volumes: - ./flask2:/app': Similar to 'app1', this mounts the './flask2' directory from the host into the '/app' directory in the container.
+
+
+# Docker Compose Commands: 
+# Build the Docker images
+# docker-compose build
+
+# Run the Docker containers
+# docker-compose up -d
+
+# Stop and remove containers
+# docker-compose down
+
+
+# Discuss the role of Docker Compose and how it differs from using Docker alone.
+
+# Orchestration of Multiple Containers:
+# Docker Alone: When using Docker alone, you might need to manually run and manage multiple containers separately. This can be cumbersome, especially as the number of containers and dependencies increases.
+# Docker Compose: With Docker Compose, you define your entire application stack in a single file, making it easier to manage and deploy multiple containers together. Compose automates the process of creating and starting the defined services.
+
+# Service Definitions:
+# Docker Alone: You need to specify individual container configurations and run them using separate docker run commands. This becomes more complex as the application architecture grows.
+# Docker Compose: In a docker-compose.yml file, you define services, their configurations, dependencies, and how they interact. This simplifies the management of the entire application stack, including networking between containers.
+
+
+#Challenges Encountered:
+# After inserting the correct codes into Google cloud shell, I was able to run the first command in my terminal successfully. This was the "docker-compose build" command. At the end of the run, it stated that it successfully built and tagged the app. However, when running the command "docker-compose up -d" I kept receiving an error on the part that says "Creating part2_app1_1," but I was able to successfully create "part2_app2_1." I tried fixing the code in the docker-compose.yml file as well as the codes in the app.py files and Dockerfiles. I tried a variety of methods, but was unable to successfully create part2_app1_1. 
+# Regarding this error message, I included screenshots to view in the screenshots folder. 
