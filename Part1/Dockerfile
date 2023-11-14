@@ -11,5 +11,15 @@ EXPOSE 5000
 # This command specifies the default command to be executed when the container starts.
 CMD ["python", "flaskapp.py"]
 
+# Documentation 
+
+# 1st Step: "cd" into the proper directory.
+# 2nd Step: then insert the following command, "docker build -t alyssa17 .," alyssa17 is the name I decided to use.
+# 3rd Step: once that finishes, I insert the command, "docker images," and I am able to see the repository "alyssa17."
+# 4th Step: then insert the following command, "docker run -d -p 5001:5000 alyssa17."
+# 5th Step: then insert the command, "docker ps," and the image "alyssa17" will appear. 
+
+
+
 # Docker build command: docker build -t docker_example_1 .
 # Docker run command: docker run -d -p 5001:5000 docker_example_1
